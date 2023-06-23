@@ -1,3 +1,5 @@
+import '@/views/more/more.css';
+
 let svgNode = document.querySelector('.icon');
 console.log(svgNode);
 
