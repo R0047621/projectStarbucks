@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackBar = require('webpackbar');
 const path = require('path');
+
 module.exports = {
   entry: {
     home: './src/views/home/home.js',
@@ -43,13 +44,13 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[name][ext]'
-        }
+          filename: 'images/[name][ext]',
+        },
       },
       {
         test: /\.(htm|html)$/,
-        loader: 'html-withimg-loader'
-      }
+        loader: 'html-withimg-loader',
+      },
     ],
   },
   mode: process.env.NODE_ENV,
