@@ -21,7 +21,8 @@
     "eslint-import-resolver-webpack": "^0.13.2",
     "html-withimg-loader": "^0.1.16",
     "jquery": "^3.7.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "swiper": "^9.4.1"
   },
   "config": {
     "port": 3000,
