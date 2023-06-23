@@ -3,14 +3,55 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>首页</title>
+  <title>Document</title>
 </head>
 
-<body>
-  <img src="../../../static/images/12oz-black-bronze-brand-handle-mug.jpg" alt="">
-  <div class="img"></div>
+<body id="app">
+  <div class="header">
+    <span>登录或创建一个新帐户 🌟</span>
+    <div class="nav">
+      <section>登录</section>
+      <section>注册</section>
+      <section>关于星享俱乐部</section>
+    </div>
+  </div>
+  <div class="login">
+    <div class="loginUser">
+      <div class="user loginP">
+        <input type="text">
+        <span style="transition: all 0.3s ease-out;">用户名或者用户邮箱</span>
+      </div>
+      <div class="password loginP">
+        <input type="password">
+        <span style="transition: all 0.3s ease-out;">密码</span>
+        <i class="iconfont">&#xebcd;</i>
+      </div>
+      <div  class="Remember loginP">
+        <input type="checkbox">
+        <strong>下次自动登录</strong>
+        <a href="#">忘记密码？</a>
+      </div>
+      <div class="provingJoin">
+        <div class="proving">
+          <div class="provingHeader1">
+            <span>拖动下方滑块完成拼图</span>
+            <img src="../../../static/images/account_3.png" >
+            <img src="../../../static/images/account_4.png" >
+          </div>
+          <p class="provingHeader2">验证错误，请重试</p>
+          <img src="../../../static/images/account_1.png" class="provingrAticle">            
+          <img src="../../../static/images/account_5.png" class="imgSlider">
+          <div class="bar"></div>
+          <div class="Slider">| | |</div>
+        </div>
+        <div class="proving2"><span class="iconfont">&#xec9e;</span>已验证</div>
+        <div class="join">登录</div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
