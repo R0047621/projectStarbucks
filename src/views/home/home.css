@@ -143,3 +143,21 @@ body {
   color: #666;
   font-size: 14px;
 }
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_fang {
+  width: 16%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer_fang p a {
+  color: #ccc;
+  font-size: 4vw;
+}
+.footer_fang img {
+  width: 50%;
+}
