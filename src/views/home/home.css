@@ -106,7 +106,7 @@ body {
   padding: 18px;
 }
 .starLectureHall {
-  height: 387px;
+  height: 435px;
   background-color: #fff;
 }
 .starLectureHall p {
@@ -146,6 +146,11 @@ body {
 .footer {
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  bottom: 0vw;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+  background: #fff;
+  z-index: 999;
 }
 .footer_fang {
   width: 16%;
@@ -153,6 +158,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+.footer_fang p {
+  width: 65px;
+  text-align: center;
 }
 .footer_fang p a {
   color: #ccc;
