@@ -1,0 +1,98 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	border:none;
+	outline: none;
+	border: 1px solid #000;
+}
+
+header {
+	padding: 16px;
+}
+
+.maore_top {
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+}
+
+.maore_top svg {
+    width: 30px;
+    height: 30px;
+	
+}
+
+.maore_top img {
+	width: 36px;
+}
+
+section{
+	height: 100%;
+	margin-top: 100px;
+}
+
+.maore_center {
+	padding: 0 16px;
+}
+
+.maore_center ul {
+	width: 100%;
+	margin: 0;
+}
+
+.maore_center ul li a {
+	display: block;
+	color: inherit;
+	font-weight: bold;
+	padding: 5px 0;
+}
+
+.maore_center ul li hr {
+	box-sizing: content-box;
+	margin:12px auto;
+}
+
+.more_logo a span{
+	color: #00A862;
+}
+
+.more_logo a {
+	padding: 5px 0;
+}
+
+.more_logo a img {
+	vertical-align: middle;
+}
+
+.more_logo .aNode {
+	padding: 2px 12px;
+	border: 1px solid #00A862;
+    border-radius: 48px;
+	margin-left: 24px;
+}
+
+.maore_button {
+	margin: 180px 16px 4px;
+}
+
+.maore_button a {
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.38);
+}
+
+.maore_button span {
+	color: rgba(0, 0, 0, 0.38);
+}
+
+
