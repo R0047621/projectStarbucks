@@ -64,7 +64,7 @@ module.exports = {
   },
   devServer: {
     // index: path.resolve(__dirname, 'home.html'),
-    open: ['/home.html'],
+    open: ['/more.html'],
     // 配置前端请求代理
     proxy: {
       '^/api': {
