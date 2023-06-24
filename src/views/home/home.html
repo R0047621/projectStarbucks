@@ -2,14 +2,204 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>首页</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>星巴克|用每一杯咖啡传递星巴克独特的体验</title>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
-  <h1 class="text-center w-[200px]">HOME</h1>
+  <div>
+    <!-- 头部 -->
+    <div class="h-[63px]">
+      <span class="text-[22px] font-bold leading-[63px] p-4">心情惬意，来杯咖啡吧 ☕</span>
+    </div>
+    <!-- 下面轮播图 -->
+    <div class="swiper mySwiper" id="swiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./../../../static/images/xbk-Rotation3.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./../../../static/images/xbk-Rotation.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./../../../static/images/xbk-Rotation2.jpg" alt="" />
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+    <!-- 下面图片 -->
+    <section class="pics">
+      <img src="./../../../static/images/tmall.jpg" alt="" />
+      <img src="./../../../static/images/studio.jpg" alt="" />
+      <img src="./../../../static/images/homepage.png" alt="" />
+    </section>
+
+    <!-- 心享俱乐部 -->
+    <section class="club">
+      <p class="text-center text-[20px] p-6 ">星享俱乐部</p>
+      <p class="text">开启您的星享之旅，星星越多、会员等级</p>
+      <p class="text">越高、好礼越丰富。<a href="#">了解更多 ›</a></p>
+      <div class="btn">
+        <div class="regBtn">注册</div>
+        <div class="logBtn">登录</div>
+      </div>
+      <img src="./../../../static/images/starclub.png" alt="">
+    </section>
+
+    <!-- 星巴克精选 -->
+    <section class="selected">
+      <h2 class="text-center text-[20px] mt-[40px]">星巴克精选</h2>
+      <p class="text2">在星巴克天猫旗舰店发现更多咖啡心意</p>
+      <ul class="card">
+        <li>
+          <img src="./../../../static/images/gift.png" alt="">
+          <div class="title">
+            <p class="title-1">会员星礼包</p>
+            <p class="mt-3 text3">
+              星享卡新升级<br>
+              更多心意好礼
+            </p>
+            <p class="more">
+              了解更多 ›
+            </p>
+          </div>
+        </li>
+        <li>
+          <img src="./../../../static/images/gift2.png" alt="">
+          <div class="title">
+            <p class="title-1">星礼卡</p>
+            <p class="mt-3 text3">
+              用一份心礼<br>
+              让心意相随
+            </p>
+            <p class="more">
+              了解更多 ›
+            </p>
+          </div>
+        </li>
+        <li>
+          <img src="./../../../static/images/pro.png" alt="">
+          <div class="title">
+            <p class="title-1">电子产品券</p>
+            <p class="mt-3 text3">
+              心意<br>
+              从这一杯开始
+            </p>
+            <p class="more">
+              了解更多 ›
+            </p>
+          </div>
+        </li>
+        <li>
+          <img src="./../../../static/images/coff.png" alt="">
+          <div class="title">
+            <p class="title-1">咖啡生活</p>
+            <p class="mt-3 text3">
+              星巴克<br>
+              用心制作
+            </p>
+            <p class="more">
+              了解更多 ›
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 咖啡星讲堂 -->
+    <section class="starLectureHall">
+      <h2 class="text-center text-[20px] pt-[40px]">1912 派克街 | 咖啡星讲堂</h2>
+      <p class="text-center p-3">了解更多星巴克咖啡文化</p>
+      <div class="swiper mySwiper" id="swiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide1">
+            <img src="./../../../static/images/lecture1.jpg" alt="" class="w-[252px] h-[201px]">
+            <span class="tag">咖啡知识</span>
+            <strong>咖啡的起源与培植</strong>
+          </div>
+          <div class="swiper-slide swiper-slide1">
+            <img src="./../../../static/images/lecture2.jpg" alt="" class="w-[252px] h-[201px]">
+            <span class="tag">咖啡品鉴</span>
+            <strong>咖啡调剂</strong>
+          </div>
+          <div class="swiper-slide swiper-slide1">
+            <img src="./../../../static/images/lecture3.jpg" alt="" class="w-[252px] h-[201px]">
+            <span class="tag">咖啡知识</span>
+            <strong>咖啡烘培</strong>
+          </div>
+          <div class="swiper-slide swiper-slide1">
+            <img src="./../../../static/images/coffeehouse-pour-over-kv.jpg" alt="" class="w-[252px] h-[201px]">
+            <span class="tag">咖啡品鉴</span>
+            <strong>手冲咖啡</strong>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="liense">
+        <img src="./../../../static/images/account_52.png" alt="">
+        <span>沪公网安备 31010402000253号|沪ICP备17003747号-1</span>
+      </div>
+    </section>
+
+    <!-- 底部 -->
+    <!-- 脚部分 -->
+    <div class="footer">
+      <div class="footer_fang">
+        <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-home-active.svg" alt="">
+        <p><a href="../home/home.html"> 主 页 </a></p>
+      </div>
+      <div class="footer_fang">
+        <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-stores.svg" alt="">
+        <p><a href="../store/store.html"> 门 店 </a></p>
+      </div>
+      <div class="footer_fang">
+        <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-account.svg" alt="">
+        <p><a href="../account/account.html">我的账户</a></p>
+      </div>
+      <div class="footer_fang">
+        <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-menu.svg" alt="">
+        <p><a href="../menu/menu.html"> 菜 单 </a></p>
+      </div>
+      <div class="footer_fang">
+        <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-more.svg" alt="">
+        <p><a href="../more/more.html"> 更 多 </a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    var swiper = new Swiper('#swiper1', {
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    var swiper = new Swiper('#swiper2', {
+      centeredSlides: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 
 </html>
