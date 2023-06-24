@@ -1,15 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>首页</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <title>门店</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    body {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 93%;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer_fang {
+      width: 16%;
+      height: 100%;
+      display: flex;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    a {
+      color: #ccc;
+      font-size: 4vw;
+      text-decoration: none;
+    }
+
+    img {
+      width: 50%;
+    }
+    .a1{
+      color: #00A862;
+    }
+  </style>
 </head>
 
 <body>
-  <h1 class=" w-12">STORE</h1>
+  <iframe id="test"
+    src="https://m.amap.com/picker/?center=114.499809,30.554586&key=608d75903d29ad471362f8c58c550daf"></iframe>
+  <!-- 脚部分 -->
+  <div class="footer">
+    <div class="footer_fang">
+      <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-home.svg" alt="">
+      <p><a href="../home/home.html"> 主 页 </a></p>
+    </div>
+    <div class="footer_fang a1">
+      <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-stores-active.svg" alt="">
+      <p><a href="../store/store.html"> 门 店 </a></p>
+    </div>
+    <div class="footer_fang">
+      <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-account.svg" alt="">
+      <p><a href="../account/account.html">我的账户</a></p>
+    </div>
+    <div class="footer_fang">
+      <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-menu.svg" alt="">
+      <p><a href="../menu/menu.html"> 菜 单 </a></p>
+    </div>
+    <div class="footer_fang">
+      <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-more.svg" alt="">
+      <p><a href="../more/more.html"> 更 多 </a></p>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var iframe = document.getElementById('test').contentWindow;
+      document.getElementById('test').onload = function () {
+        iframe.postMessage('hello', 'https://m.amap.com/picker/');
+      };
+      window.addEventListener("message", function (e) {
+        alert('您选择了:' + e.data.name + ',' + e.data.location)
+      }, false);
+    }())
+  </script>
+
+  <script type="text/javascript">
+    var mock = {
+      log: function (result) {
+        window.parent.setIFrameResult('log', result);
+      }
+    }
+    console = mock;
+    window.Konsole = {
+      exec: function (code) {
+        code = code || '';
+        try {
+          var result = window.eval(code);
+          window.parent.setIFrameResult('result', result);
+        } catch (e) {
+          window.parent.setIFrameResult('error', e);
+        }
+      }
+    }
+  </script>
+
 </body>
 
 </html>
