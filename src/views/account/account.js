@@ -37,13 +37,13 @@ Slider.addEventListener('touchstart', function(e) {
 Slider.addEventListener('touchmove', function(e) {
     e.preventDefault(); // 阻止页面滚动
     endX = e.touches[0].pageX; // 记录结束位置
-    console.log('translateX(' + (endX - startX) + 'px)')
-    if((endX - startX)<=-30){
-        Slider.style.transform = 'translateX(-30px)'; // 移动元素
-        imgSlider.style.transform = 'translateX(-30px)';
-    }else if((endX - startX)>=280){
-        Slider.style.transform = 'translateX(280px)'; // 移动元素
-        imgSlider.style.transform = 'translateX(280px)';
+    let move2=(endX - startX)/window.innerWidth*100
+    if(move2<=-6.5){
+        Slider.style.transform = `translateX(-6.5*window.innerWidth/100'px')`; // 移动元素
+        imgSlider.style.transform = `translateX(-6.5*window.innerWidth/100+'px')`;
+    }else if(move2>=61){
+        Slider.style.transform = `translateX(61*window.innerWidth/100+'px')`; // 移动元素
+        imgSlider.style.transform = `translateX(61*window.innerWidth/100+'px')`;
     }else{
         Slider.style.transform = 'translateX(' + (endX - startX) + 'px)'; // 移动元素
         imgSlider.style.transform = 'translateX(' + (endX - startX) + 'px)';
@@ -51,15 +51,12 @@ Slider.addEventListener('touchmove', function(e) {
 })
 
 Slider.addEventListener('touchend', function(e) {
-    console.log((endX - startX)/window.innerWidth);
-    let move1=(endX - startX)/window.innerWidth*100
-    console.log(typeof move1)
-    if(move1<=52&&move1>=49.5){
-        console.log(11111)
+
+    let move1=(endX - startX)/window.innerWidth*100;
+    if(move1<=52&&move1>=49.5) {
         proving.style.display='none'
         proving2.style.display='flex' 
-    }else{
-        console.log(2222)
+    }else {
         provingHeader1.style.display='none'
         provingHeader2.style.display='block'
         Slider.style.transform = 'translateX(0)'; // 回到原点
@@ -72,11 +69,11 @@ Slider.addEventListener('touchend', function(e) {
 inputs[0].addEventListener("focus",()=>{
     spans[0].style.top='0'
     inputs[0].style.borderBottom=".5vw solid #24c00f";
-    inputs[1].style.borderBottom="none";
+    inputs[1].style.borderBottom="1px solid #ccc";
 })
 inputs[1].addEventListener("focus",()=>{
     spans[1].style.top='0'
-    inputs[0].style.borderBottom="none";
+    inputs[0].style.borderBottom="1px solid #ccc";
     inputs[1].style.borderBottom=".5vw solid #24c00f";
 })
 inputs[0].addEventListener("blur",()=>{
