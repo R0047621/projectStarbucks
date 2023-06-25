@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>首页</title>
+
     <link
       rel="stylesheet"
       href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"
@@ -20,7 +21,7 @@
 
   <body>
     <div class="address">
-      <span></span>
+      <span class="iconfont icon-position pos"></span>
       <span>武汉软件新城3期</span>
       <span
         class="fa fa-chevron-down"
@@ -37,6 +38,7 @@
     <div id="container"></div>
 
     <div class="all"></div>
+
     <div class="footer">
       <a class="footer_fang" href="./home.html">
         <img
@@ -97,7 +99,7 @@
         map: map,
         position: [114.508459, 30.54948],
         label: {
-          offset: new AMap.Pixel(20, 20), //修改label相对于maker的位置
+          offset: new AMap.Pixel(20, 20),
           content: '点击Marker打开高德地图',
         },
       });
@@ -340,11 +342,8 @@
         },
       ],
     };
-    // console.log(data.data);
     let dataArr = document.getElementsByClassName('all')[0];
-    // console.log(dataArr);
     for (let i = 0; i < data.data.length; i++) {
-      // console.log(i);
       dataArr.innerHTML += `
     <ul class="list">
         <li class="list-item">
@@ -361,7 +360,7 @@
             <div>196m</div>
           </div>
           <div class="right">
-            <img src="../../../static/images/1.jpg" alt="" class="img">
+            <i class="fa fa-info-circle i_icon"></i>
           </div>
         </li>
       </ul>

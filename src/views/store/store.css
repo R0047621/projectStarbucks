@@ -31,10 +31,6 @@ li{
      font-size: 3.5vw;
      width: 65vw;
 }
-.img{
-    width: 5.3333vw;
-    height: 5.3333vw;
-}
 
   .search{
     width: 85vw;
@@ -69,6 +65,16 @@ li{
     top: 14.4vw;
     right: 24.4vw;
     color: rgba(0, 0, 0, 0.57);
+  }
+  .i_icon{
+    color: #00A862;
+    
+  }
+  .i_icon{
+   font-size: 5.8667vw;
+  }
+  .pos{
+    color: #00A862;
   }
   .footer {
     width: 100vw;
