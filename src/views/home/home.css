@@ -144,6 +144,7 @@ body {
   font-size: 14px;
 }
 .footer {
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -158,15 +159,18 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  display: block;
+  color: rgba(0, 0, 0, 0.56);
+  font-size: 4vw;
 }
 .footer_fang p {
   width: 65px;
   text-align: center;
 }
-.footer_fang p a {
-  color: #ccc;
-  font-size: 4vw;
-}
 .footer_fang img {
+  margin: 0 auto;
   width: 50%;
+}
+.green {
+  color: #00a862 !important;
 }

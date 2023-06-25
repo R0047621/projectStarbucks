@@ -31,7 +31,7 @@ input {
   justify-content: space-between;
 }
 .header .nav section {
-  margin-right: 5vw ;
+  margin-right: 5vw;
   color: #000;
 }
 .header .nav section:hover {
@@ -90,7 +90,7 @@ input {
   height: 6vw;
 }
 .login .loginUser .Remember strong {
-  margin-right: 25vw ;
+  margin-right: 25vw;
 }
 .login .loginUser .Remember > a {
   color: #24c00f;
@@ -121,7 +121,7 @@ input {
   height: 4vw;
   margin-top: 2vw;
   border-radius: 2vw;
-  background-color: #C8C8C8;
+  background-color: #c8c8c8;
 }
 .proving .Slider {
   width: 15vw;
@@ -130,7 +130,7 @@ input {
   line-height: 7vw;
   border-radius: 5vw;
   text-align: center;
-  background-color: #1A79FF;
+  background-color: #1a79ff;
   position: absolute;
   left: 5vw;
   bottom: -1.5vw;
@@ -175,8 +175,10 @@ input {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  background-color: #fff;
-  bottom: 0;
+  bottom: 0vw;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+  background: #fff;
+  z-index: 999;
 }
 .footer_fang {
   width: 16%;
@@ -184,16 +186,24 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-.footer_fang p a {
-  color: #ccc;
+  display: block;
+  color: rgba(0, 0, 0, 0.56);
   font-size: 4vw;
 }
+.footer_fang p {
+  width: 65px;
+  text-align: center;
+}
 .footer_fang img {
+  display: block;
+  margin: 0 auto;
   width: 50%;
 }
+.green {
+  color: #00a862 !important;
+}
 .iconfont {
-  font-family: "iconfont" !important;
+  font-family: 'iconfont' !important;
   font-size: 8vw;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
