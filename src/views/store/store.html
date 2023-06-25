@@ -35,12 +35,7 @@
       <span class="screen">筛选</span>
     </div>
     <div id="container"></div>
-    <div class="info" style="min-width: 10rem">
-      <img
-        src="https://a.amap.com/lbs/static/img/js-markonapp.png"
-        style="width: 120px; height: 120px"
-      />
-    </div>
+
     <div class="all"></div>
     <div class="footer">
       <a class="footer_fang" href="./home.html">
@@ -84,11 +79,20 @@
       type="text/javascript"
       src="https://webapi.amap.com/maps?v=1.4.15&key=e5f54aa2e1b11f975d12491cc0a8a29e"
     ></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=e5f54aa2e1b11f975d12491cc0a8a29e&&plugin=AMap.Scale,AMap.OverView,AMap.ToolBar"></script>
     <script>
+      toolBar = new AMap.ToolBar({
+        visible: true,
+      });
+
       var map = new AMap.Map('container', {
+        resizeEnable: true,
         zoom: 14,
         center: [114.508459, 30.54948],
       });
+
+      map.addControl(toolBar);
+
       var marker = new AMap.Marker({
         map: map,
         position: [114.508459, 30.54948],
@@ -100,13 +104,9 @@
       marker.on('click', function (e) {
         console.log(e);
         marker.markOnAMAP({
-          // name: '首开广场',
           position: marker.getPosition(),
         });
       });
-      if (AMap.UA.mobile) {
-        document.getElementsByClassName('info')[0].style.display = 'none';
-      }
     </script>
   </body>
   <script>
