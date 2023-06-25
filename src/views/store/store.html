@@ -1,134 +1,371 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页</title>
+    <link
+      rel="stylesheet"
+      href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <body>
+    <div class="address">
+      <span></span>
+      <span>武汉软件新城3期</span>
+      <span
+        class="fa fa-chevron-down"
+        style="width: 5.8667vw; height: 5.8667vw; display: inline-block"
+      ></span>
+    </div>
+    <div class="search">
+      <div class="inp">
+        <input type="text" placeholder="输入第地址查找门店" />
+        <i class="fa fa-search icon"></i>
+      </div>
+      <span class="screen">筛选</span>
+    </div>
+    <div id="container"></div>
+    <div class="info" style="min-width: 10rem">
+      <img
+        src="https://a.amap.com/lbs/static/img/js-markonapp.png"
+        style="width: 120px; height: 120px"
+      />
+    </div>
+    <div class="all"></div>
+    <div class="footer">
+      <a class="footer_fang" href="./home.html">
+        <img
+          src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-home.svg"
+          alt=""
+        />
+        <p>主页</p>
+      </a>
+      <a class="footer_fang a1" href="./store.html">
+        <img
+          src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-stores-active.svg"
+          alt=""
+        />
+        <p class="green">门 店</p>
+      </a>
+      <a class="footer_fang" href="./account.html">
+        <img
+          src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-account.svg"
+          alt=""
+        />
+        <p>我的账户</p>
+      </a>
+      <a class="footer_fang" href="./menu.html">
+        <img
+          src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-menu.svg"
+          alt=""
+        />
+        <p>菜 单</p>
+      </a>
+      <a class="footer_fang" href="./more.html">
+        <img
+          src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-more.svg"
+          alt=""
+        />
+        <p>更 多</p>
+      </a>
+    </div>
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <title>门店</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      border: none;
-    }
-
-    body {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: 0;
-    }
-
-    iframe {
-      width: 100%;
-      height: 93%;
-    }
-
-
-    .footer {
-      width: 100vw;
-      display: flex;
-      justify-content: space-between;
-      position: fixed;
-      bottom: 0vw;
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
-      background: #fff;
-      z-index: 999;
-    }
-
-    .footer_fang {
-      width: 16%;
-      height: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      text-decoration: none;
-      justify-content: space-around;
-      display: block;
-      color: rgba(0, 0, 0, 0.56);
-      font-size: 4vw;
-    }
-
-    .footer_fang p {
-      width: 65px;
-      text-align: center;
-    }
-
-    .footer_fang img {
-      margin: 0 auto;
-      display: block;
-      width: 50%;
-    }
-
-    .green {
-      color: #00a862 !important;
-    }
-  </style>
-</head>
-
-<body>
-  <iframe id="test"
-    src="https://m.amap.com/picker/?center=114.499809,30.554586&key=608d75903d29ad471362f8c58c550daf"></iframe>
-  <!-- 脚部分 -->
-  <div class="footer">
-    <a class="footer_fang" href="./home.html">
-      <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-home.svg" alt="">
-      <p>主页</p>
-    </a>
-    <a class="footer_fang a1" href="./store.html">
-      <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-stores-active.svg" alt="">
-      <p class="green">门 店</p>
-    </a>
-    <a class="footer_fang" href="./account.html">
-      <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-account.svg" alt="">
-      <p>我的账户</p>
-    </a>
-    <a class="footer_fang" href="./menu.html">
-      <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-menu.svg" alt="">
-      <p>菜 单</p>
-    </a>
-    <a class="footer_fang" href="./more.html">
-      <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-more.svg" alt="">
-      <p>更 多</p>
-    </a>
-  </div>
+    <script
+      type="text/javascript"
+      src="https://webapi.amap.com/maps?v=1.4.15&key=e5f54aa2e1b11f975d12491cc0a8a29e"
+    ></script>
+    <script>
+      var map = new AMap.Map('container', {
+        zoom: 14,
+        center: [114.508459, 30.54948],
+      });
+      var marker = new AMap.Marker({
+        map: map,
+        position: [114.508459, 30.54948],
+        label: {
+          offset: new AMap.Pixel(20, 20), //修改label相对于maker的位置
+          content: '点击Marker打开高德地图',
+        },
+      });
+      marker.on('click', function (e) {
+        console.log(e);
+        marker.markOnAMAP({
+          // name: '首开广场',
+          position: marker.getPosition(),
+        });
+      });
+      if (AMap.UA.mobile) {
+        document.getElementsByClassName('info')[0].style.display = 'none';
+      }
+    </script>
+  </body>
   <script>
-    (function () {
-      var iframe = document.getElementById('test').contentWindow;
-      document.getElementById('test').onload = function () {
-        iframe.postMessage('hello', 'https://m.amap.com/picker/');
-      };
-      window.addEventListener("message", function (e) {
-        alert('您选择了:' + e.data.name + ',' + e.data.location)
-      }, false);
-    }())
-  </script>
-
-  <script type="text/javascript">
-    var mock = {
-      log: function (result) {
-        window.parent.setIFrameResult('log', result);
-      }
+    let data = {
+      meta: {
+        total: 30,
+      },
+      data: [
+        {
+          id: '70774',
+          name: '武汉巴公房子店',
+          address: {
+            city: '武汉市',
+            streetAddressLine1: '湖北省武汉市',
+            streetAddressLine2: '',
+            streetAddressLine3: '湖北省武汉市江岸区一元街街道老屋巴公房子旧址',
+            postalCode: '430000',
+          },
+          coordinates: {
+            longitude: 114.2997418642699,
+            latitude: 30.58579927138026,
+          },
+          today: {
+            closeTime: '22:00:00',
+            openTime: '08:00:00',
+          },
+          features: ['OG'],
+          hasArtwork: false,
+          storeNumber: '70774',
+        },
+        {
+          id: '60472',
+          name: '武汉黎黄陂路江滩店',
+          address: {
+            city: '武汉市',
+            streetAddressLine1: '湖北省武汉市',
+            streetAddressLine2: '',
+            streetAddressLine3: '武汉市江岸区沿江大道111号',
+            postalCode: '430000',
+          },
+          coordinates: {
+            longitude: 114.30219984067664,
+            latitude: 30.58615947913454,
+          },
+          today: {
+            closeTime: '22:00:00',
+            openTime: '07:00:00',
+          },
+          features: ['OG', 'DL', 'MIC', 'MOP', 'NCB', 'RC', 'SBB'],
+          hasArtwork: false,
+          storeNumber: '60472',
+        },
+        {
+          id: '61770',
+          name: '武汉江汉路中心百货店',
+          address: {
+            city: '武汉市',
+            streetAddressLine1: '湖北省武汉市',
+            streetAddressLine2: '',
+            streetAddressLine3: '武汉市江汉区江汉路129号中心百货1楼',
+            postalCode: '430000',
+          },
+          coordinates: {
+            longitude: 114.29002046585084,
+            latitude: 30.581867378187376,
+          },
+          today: {
+            closeTime: '22:30:00',
+            openTime: '07:30:00',
+          },
+          features: ['OG', 'DL', 'MOP'],
+          hasArtwork: false,
+          storeNumber: '61770',
+        },
+        {
+          id: '32410',
+          name: '武汉王府井店',
+          address: {
+            city: '武汉市',
+            streetAddressLine1: '湖北省武汉市',
+            streetAddressLine2: '',
+            streetAddressLine3: '湖北省武汉市江汉区中山大道888号王府井百货一楼',
+            postalCode: '430000',
+          },
+          coordinates: {
+            longitude: 114.29135835151102,
+            latitude: 30.5795046558727,
+          },
+          today: {
+            closeTime: '23:00:00',
+            openTime: '07:30:00',
+          },
+          features: ['OG', 'MIC', 'MOP'],
+          hasArtwork: false,
+          storeNumber: '32410',
+        },
+        {
+          id: '15585',
+          name: '武汉宝利金店',
+          address: {
+            city: '武汉市',
+            streetAddressLine1: '湖北省武汉市',
+            streetAddressLine2: '',
+            streetAddressLine3: '武汉市江汉区花楼街198号1楼',
+            postalCode: '430000',
+          },
+          coordinates: {
+            longitude: 114.29280245291014,
+            latitude: 30.57816162854057,
+          },
+          today: {
+            closeTime: '23:00:00',
+            openTime: '07:30:00',
+          },
+          features: ['OG', 'DL', 'MIC', 'MOP', 'RC'],
+          hasArtwork: false,
+          storeNumber: '15585',
+        },
+        {
+          id: '18511',
+          name: '武汉中山大洋百货店',
+          address: {
+            city: '武汉市',
+            streetAddressLine1: '湖北省武汉市',
+            streetAddressLine2: '',
+            streetAddressLine3:
+              '湖北省武汉市江汉区中山大道756号中山大洋百货1层A17单元',
+            postalCode: '430000',
+          },
+          coordinates: {
+            longitude: 114.2904281616211,
+            latitude: 30.57751781846897,
+          },
+          today: {
+            closeTime: '22:00:00',
+            openTime: '07:30:00',
+          },
+          features: ['OG', 'DL', 'MIC', 'MOP'],
+          hasArtwork: false,
+          storeNumber: '18511',
+        },
+        {
+          id: '48796',
+          name: '武汉世纪都会广场1店',
+          address: {
+            city: '武汉市',
+            streetAddressLine1: '湖北省武汉市',
+            streetAddressLine2: '',
+            streetAddressLine3:
+              '湖北省武汉市京汉大道与江汉路交汇处世纪都会广场一楼',
+            postalCode: '430000',
+          },
+          coordinates: {
+            longitude: 114.28698635114417,
+            latitude: 30.58332026689656,
+          },
+          today: {
+            closeTime: '22:30:00',
+            openTime: '07:00:00',
+          },
+          features: ['OG', 'DL', 'MIC', 'MOP'],
+          hasArtwork: false,
+          storeNumber: '48796',
+        },
+        {
+          id: '27167',
+          name: '武汉大润发店',
+          address: {
+            city: '武汉市',
+            streetAddressLine1: '湖北省武汉市',
+            streetAddressLine2: '',
+            streetAddressLine3: '武汉市江汉区江汉路257号大润发超市1楼',
+            postalCode: '430000',
+          },
+          coordinates: {
+            longitude: 114.28536093231745,
+            latitude: 30.5853402354844,
+          },
+          today: {
+            closeTime: '22:00:00',
+            openTime: '07:00:00',
+          },
+          features: ['OG', 'DL', 'MIC', 'MOP'],
+          hasArtwork: false,
+          storeNumber: '27167',
+        },
+        {
+          id: '18249',
+          name: '武汉融科天城店',
+          address: {
+            city: '武汉市',
+            streetAddressLine1: '湖北省武汉市',
+            streetAddressLine2: '',
+            streetAddressLine3:
+              '武汉市江岸区新马路3号（融科天城三期13#、14#商铺）',
+            postalCode: '430000',
+          },
+          coordinates: {
+            longitude: 114.29811000823976,
+            latitude: 30.59671574237749,
+          },
+          today: {
+            closeTime: '22:00:00',
+            openTime: '07:00:00',
+          },
+          features: ['OG', 'DL', 'MOP'],
+          hasArtwork: false,
+          storeNumber: '18249',
+        },
+        {
+          id: '70928',
+          name: '武汉南国中心城店',
+          address: {
+            city: '武汉市',
+            streetAddressLine1: '湖北省武汉市',
+            streetAddressLine2: '',
+            streetAddressLine3: '湖北省武汉市江汉区解放大道1385号',
+            postalCode: '430000',
+          },
+          coordinates: {
+            longitude: 114.28234398365022,
+            latitude: 30.58513242172554,
+          },
+          today: {
+            closeTime: '20:00:00',
+            openTime: '08:00:00',
+          },
+          features: ['OG'],
+          hasArtwork: false,
+          storeNumber: '70928',
+        },
+      ],
+    };
+    // console.log(data.data);
+    let dataArr = document.getElementsByClassName('all')[0];
+    // console.log(dataArr);
+    for (let i = 0; i < data.data.length; i++) {
+      // console.log(i);
+      dataArr.innerHTML += `
+    <ul class="list">
+        <li class="list-item">
+          <div class="left">
+            <span class="cirle">${i + 1}</span>
+          </div>
+          <div class="middle">
+            <h3>${data.data[i].name}</h3>
+            <div>
+             ${data.data[i].address.city} ${
+        data.data[i].address.streetAddressLine1
+      } ${data.data[i].address.streetAddressLine3}
+            </div>
+            <div>196m</div>
+          </div>
+          <div class="right">
+            <img src="../../../static/images/1.jpg" alt="" class="img">
+          </div>
+        </li>
+      </ul>
+    `;
     }
-    console = mock;
-    window.Konsole = {
-      exec: function (code) {
-        code = code || '';
-        try {
-          var result = window.eval(code);
-          window.parent.setIFrameResult('result', result);
-        } catch (e) {
-          window.parent.setIFrameResult('error', e);
-        }
-      }
-    }
   </script>
-
-</body>
-
 </html>
